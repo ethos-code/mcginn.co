@@ -1,12 +1,12 @@
 {
   "title": "John McGinn",
   "description": "It's nice to meet you.",
-  "logo": "/upload/logo.svg",
+  "logo": "/upload/BA4MbBOw_400x400.jpg",
   "footer": "Ⓒ 1981-2020, John McGinn",
-  "favicon": "favicon-32x32.png",
+  "favicon": "/upload/BA4MbBOw_400x400.jpg",
   "navigation": [
     {
-      "text": "Works",
+      "text": "Work",
       "link": "/",
       "position": "left",
       "external": false

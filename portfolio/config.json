@@ -1,33 +1,33 @@
 {
-    "title": "Acme",
-    "description": "Creative Agency",
-    "logo": "/upload/logo.svg",
-    "footer": "Ⓒ Acme",
-    "favicon": "favicon-32x32.png",
-    "navigation": [
-      {
-        "text": "Works",
-        "link": "/",
-        "position": "left",
-        "external": false
-      },
-      {
-        "text": "Instagram",
-        "link": "https://www.instagram.com/its.nwa",
-        "position": "left",
-        "external": true
-      },
-      {
-        "text": "Say hi!",
-        "link": "mailto:sayhi@mydomain.com",
-        "position": "right",
-        "external": true
-      },
-      {
-        "text": "Journal",
-        "link": "/journal/",
-        "position": "right",
-        "external": false
-      }
-    ]
-  }
+  "title": "John McGinn",
+  "description": "It's nice to meet you.",
+  "logo": "/upload/logo.svg",
+  "footer": "Ⓒ 1981-2020, John McGinn",
+  "favicon": "favicon-32x32.png",
+  "navigation": [
+    {
+      "text": "Works",
+      "link": "/",
+      "position": "left",
+      "external": false
+    },
+    {
+      "text": "Instagram",
+      "link": "https://www.instagram.com/its.nwa",
+      "position": "left",
+      "external": true
+    },
+    {
+      "text": "Say hi!",
+      "link": "mailto:sayhi@mydomain.com",
+      "position": "right",
+      "external": true
+    },
+    {
+      "text": "Journal",
+      "link": "/journal/",
+      "position": "right",
+      "external": false
+    }
+  ]
+}

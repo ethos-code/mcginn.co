@@ -53,7 +53,89 @@
   }
 
   main {
-    /* intentionally empty — let the negative space carry the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 56px;
+    padding: 48px 0;
+  }
+
+  section,
+  nav { display: block; }
+
+  .work-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  }
+
+  .work-list li {
+    border-bottom: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  }
+
+  .work-list a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 24px;
+    padding: 18px 0;
+    color: var(--ink);
+    text-decoration: none;
+    transition: padding-left 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .work-list a:hover,
+  .work-list a:focus-visible {
+    padding-left: 8px;
+    outline: none;
+  }
+
+  .work-list .name {
+    font-size: clamp(18px, 2.4vw, 22px);
+    font-weight: 500;
+    letter-spacing: -0.012em;
+    line-height: 1;
+  }
+
+  .work-list .name sup {
+    font-size: 0.5em;
+    font-weight: 400;
+    margin-left: 0.15em;
+    vertical-align: super;
+    opacity: 0.7;
+  }
+
+  .work-list .dest {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+    color: var(--ink);
+    opacity: 0.5;
+  }
+
+  .elsewhere {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 28px;
+  }
+
+  .elsewhere a {
+    font-size: 13px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    opacity: 0.65;
+    padding: 2px 0;
+    transition: opacity 200ms ease, border-color 200ms ease;
+  }
+
+  .elsewhere a:hover,
+  .elsewhere a:focus-visible {
+    opacity: 1;
+    border-bottom-color: var(--ink);
+    outline: none;
   }
 
   footer {
@@ -109,7 +191,24 @@
     </svg>
   </header>
 
-  <main></main>
+  <main>
+    <section aria-label="Selected work">
+      <ul class="work-list">
+        <li><a href="https://ethos.is" rel="noopener"><span class="name">ethos<sup>®</sup></span><span class="dest">ethos.is</span></a></li>
+        <li><a href="https://thefountain.ai" rel="noopener"><span class="name">FOUNTAIN<sup>®</sup></span><span class="dest">thefountain.ai</span></a></li>
+        <li><a href="https://thevanish.co" rel="noopener"><span class="name">vanish</span><span class="dest">thevanish.co</span></a></li>
+        <li><a href="https://flyreel.app" rel="noopener"><span class="name">flyreel</span><span class="dest">flyreel.app</span></a></li>
+      </ul>
+    </section>
+
+    <nav class="elsewhere" aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/johnsmcginn/" rel="noopener">LinkedIn</a>
+      <a href="https://foundation.app/@mcginn" rel="noopener">Foundation</a>
+      <a href="https://www.behance.net/mcginnco" rel="noopener">Behance</a>
+      <a href="https://www.instagram.com/jsmcginn/" rel="noopener">Instagram</a>
+      <a href="https://twitter.com/mcginnco" rel="noopener">X</a>
+    </nav>
+  </main>
 
   <footer>
     <div class="meta">In progress &middot; MMXXVI</div>

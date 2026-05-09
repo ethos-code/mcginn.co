@@ -55,20 +55,10 @@ body {
     color 700ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-html,
-body {
-  /* Belt + suspenders: prevent any wide child (Fountain bleed, fixed
-     elements, long mono lines) from triggering horizontal scroll on
-     mobile. `clip` is preferred but we fall back to `hidden` for older
-     mobile browsers that don't yet support clip. */
+html {
+  /* Prevent the fixed nowrap statement from creating horizontal scroll on
+     narrow viewports — it can extend to the left of viewport when long. */
   overflow-x: clip;
-  max-width: 100%;
-}
-@supports not (overflow-x: clip) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
 }
 
 body {

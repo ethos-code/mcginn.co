@@ -103,12 +103,7 @@ export function HistorySection({ entry }: HistorySectionProps) {
             {...reveal}
             transition={{ ...reveal.transition, delay: 0.08 }}
             aria-label="Selected clients across roles"
-            className="md:col-span-7 md:row-start-2 m-0 p-0 list-none font-sans text-[14px] md:text-[15px] leading-[1.7] opacity-90"
-            style={{
-              columnCount: 2,
-              columnGap: '3em',
-              columnFill: 'balance',
-            }}
+            className="md:col-span-7 md:row-start-2 m-0 p-0 list-none font-sans text-[14px] md:text-[15px] leading-[1.7] opacity-90 columns-1 md:[column-count:2] md:[column-gap:3em] md:[column-fill:balance]"
           >
             {clients.map((c) => (
               <li

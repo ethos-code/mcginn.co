@@ -33,7 +33,9 @@ export function FountainArtwork({
       <div
         className={
           bleed
-            ? 'relative w-[124%] h-[64vh] md:h-[78vh] -mr-[24%] -my-[6vh]'
+            ? // Mobile: contained within the column. Desktop+: scale up and
+              // bleed past the right column edge for the floating-pen effect.
+              'relative w-full h-[48vh] md:w-[124%] md:h-[78vh] md:-mr-[24%] md:-my-[6vh]'
             : 'relative w-full h-[58vh] md:h-[70vh]'
         }
       >

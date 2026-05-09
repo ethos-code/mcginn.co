@@ -59,7 +59,15 @@ export function WorkSection({ entry, index, total, artwork, onOpen }: WorkSectio
 
             <h2
               className="font-display m-0 leading-[1.05] tracking-[-0.022em]"
-              style={{ fontSize: 'clamp(36px, 5vw, 64px)' }}
+              style={
+                entry.slug === 'fountain'
+                  ? {
+                      fontSize: 'clamp(28px, 3.6vw, 44px)',
+                      fontWeight: 800,
+                      letterSpacing: '-0.014em',
+                    }
+                  : { fontSize: 'clamp(36px, 5vw, 64px)' }
+              }
             >
               {entry.title}
             </h2>

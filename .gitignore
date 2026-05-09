@@ -2,3 +2,20 @@
 *.log
 node_modules/
 .vscode/
+
+# Next.js
+.next/
+out/
+next-env.d.ts.bak
+
+# Build outputs
+build/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel

@@ -3,6 +3,11 @@
 node_modules/
 .vscode/
 
+# macOS Finder / iCloud sync duplicates
+* 2.*
+*\ 2/
+*.icloud
+
 # Next.js
 .next/
 out/

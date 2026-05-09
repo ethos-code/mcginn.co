@@ -146,20 +146,16 @@ const CONTACT_LINKS = [
 
 export default function ResumePage() {
   return (
-    <main className="w-full min-h-screen px-[clamp(24px,6vw,96px)] pt-[8vh] pb-[14vh] bg-paper text-ink">
+    <main className="w-full min-h-screen px-[clamp(24px,6vw,96px)] pt-[18vh] pb-[14vh] bg-paper text-ink">
       <div className="mx-auto max-w-[820px]">
-        {/* Header */}
-        <header className="mt-2 flex flex-col gap-3">
-          <h1
-            className="font-display text-ink m-0 leading-[1.02] tracking-[-0.022em]"
-            style={{ fontSize: 'clamp(40px, 6vw, 76px)' }}
-          >
-            John McGinn
-          </h1>
-          <p className="font-display text-ink/65 m-0 text-[18px] md:text-[20px] tracking-[-0.005em]">
+        {/* Visible header — name hidden; the fixed signature in the layout
+            stands in for it visually. The H1 stays in the DOM for SEO/a11y. */}
+        <header className="flex flex-col gap-3">
+          <h1 className="sr-only">John McGinn — Resume</h1>
+          <p className="font-display text-ink m-0 text-[20px] md:text-[22px] tracking-[-0.005em]">
             Designer + Founder
           </p>
-          <p className="mt-3 font-mono text-[12px] md:text-[13px] text-ink/60 leading-[1.7] m-0">
+          <p className="mt-2 font-mono text-[12px] md:text-[13px] text-ink/60 leading-[1.7] m-0">
             Seattle, WA ·{' '}
             <a href="mailto:j@mcginn.co" className="hover-underline">
               j@mcginn.co

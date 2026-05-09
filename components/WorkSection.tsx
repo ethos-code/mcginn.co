@@ -62,9 +62,9 @@ export function WorkSection({ entry, index, total, artwork, onOpen }: WorkSectio
               style={
                 entry.slug === 'fountain'
                   ? {
-                      fontSize: 'clamp(28px, 3.6vw, 44px)',
-                      fontWeight: 800,
-                      letterSpacing: '-0.014em',
+                      fontSize: 'clamp(36px, 5vw, 64px)',
+                      fontWeight: 600,
+                      letterSpacing: '-0.018em',
                     }
                   : { fontSize: 'clamp(36px, 5vw, 64px)' }
               }

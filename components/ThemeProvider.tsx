@@ -9,6 +9,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import { usePathname } from 'next/navigation';
 
 export interface SectionTheme {
   /** Stable id used to detect when the active section actually changed. */
@@ -42,6 +43,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const themesRef = useRef<Map<HTMLElement, SectionTheme>>(new Map());
   const observerRef = useRef<IntersectionObserver | null>(null);
   const hasFiredRef = useRef(false);
+  const pathname = usePathname();
+
+  // When the route changes, drop the previous page's active theme so pages
+  // without sections (e.g. /resume) render with the default ink color
+  // instead of inheriting whatever was active on the homepage.
+  useEffect(() => {
+    setActive(DEFAULT_THEME);
+    hasFiredRef.current = false;
+  }, [pathname]);
 
   useEffect(() => {
     if (typeof IntersectionObserver === 'undefined') return;
@@ -79,6 +89,22 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     root.style.setProperty('--theme-ink', active.ink);
     root.style.setProperty('--theme-accent', active.accent);
   }, [active.bg, active.ink, active.accent]);
+
+  // Keep the iOS Safari chrome (URL bar / status area) tinted in lock-step
+  // with the active section. We fully replace the meta element instead of
+  // mutating its `content` attribute — some Safari builds (notably the
+  // chrome-tint feature on iOS 18) cache the SSR'd value and ignore in-place
+  // mutations, which is why Salesforce Suite's blue would snap back to the
+  // static fallback color partway through scrolling.
+  useEffect(() => {
+    document
+      .querySelectorAll('meta[name="theme-color"]')
+      .forEach((m) => m.remove());
+    const meta = document.createElement('meta');
+    meta.setAttribute('name', 'theme-color');
+    meta.setAttribute('content', active.bg);
+    document.head.appendChild(meta);
+  }, [active.bg]);
 
   const register = useCallback<ThemeContextValue['register']>((theme, el) => {
     themesRef.current.set(el, theme);

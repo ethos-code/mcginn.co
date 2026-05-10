@@ -29,7 +29,7 @@ export function WorkSections({ entries }: WorkSectionsProps) {
             total={entries.length}
             artwork={
               entry.slug === 'fountain' ? (
-                <FountainArtwork bleed onOpen={() => setOpenSlug(entry.slug)} />
+                <FountainArtwork bleed />
               ) : undefined
             }
             onOpen={() => setOpenSlug(entry.slug)}

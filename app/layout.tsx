@@ -74,7 +74,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#FAFAF7',
+  // theme-color is set dynamically by ThemeProvider so the iOS Safari chrome
+  // tracks the active section. A static value here gets cached by Safari's
+  // chrome-tint feature and fights the dynamic update.
 };
 
 export default function RootLayout({

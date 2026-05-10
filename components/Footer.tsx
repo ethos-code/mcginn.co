@@ -8,8 +8,8 @@ interface FooterProps {
 
 export function Footer({ sticky = false }: FooterProps) {
   const wrapperClass = sticky
-    ? 'fixed inset-x-0 bottom-0 z-30 w-full px-[clamp(20px,6vw,96px)] pt-3 pointer-events-none'
-    : 'w-full px-[clamp(24px,6vw,96px)] pb-10 pt-6';
+    ? 'fixed inset-x-0 bottom-0 z-30 w-full px-[clamp(20px,4vw,48px)] pt-3 pointer-events-none'
+    : 'w-full px-[clamp(20px,4vw,48px)] pb-10 pt-6';
 
   const wrapperStyle = sticky
     ? {
@@ -21,10 +21,10 @@ export function Footer({ sticky = false }: FooterProps) {
   return (
     <footer className={wrapperClass} style={wrapperStyle}>
       <div
-        className={`mx-auto flex max-w-[960px] flex-col gap-2 md:flex-row md:items-center md:justify-between opacity-70 ${sticky ? 'pointer-events-auto' : ''}`}
+        className={`flex flex-col gap-2 md:flex-row md:items-center md:justify-between opacity-70 ${sticky ? 'pointer-events-auto' : ''}`}
       >
         <p className="font-mono text-[12px] leading-[1.6] m-0">
-          © 2026 John McGinn · Seattle, WA
+          © 2026 John McGinn · Charleston, SC
         </p>
         <nav
           aria-label="Footer"

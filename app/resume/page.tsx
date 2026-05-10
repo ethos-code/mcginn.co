@@ -25,9 +25,9 @@ const ROLES: RoleEntry[] = [
   {
     range: '2021 — Present',
     title: 'Salesforce + Slack',
-    location: 'Seattle, WA',
+    location: 'San Francisco, CA',
     detail:
-      'Currently Design Director + Architect at Slack (Aug 2025 – present) and Head of Design + Architect, Salesforce Suite at Salesforce (Aug 2023 – present). Joined as Principal Product Designer in Feb 2021; progressed through Director and Senior Director before taking on Suite leadership.\n\nLead design for the agentic experience layer — making AI feel like part of the work, not a separate tool. Shape conversation-driven, trustworthy agentic systems that unify Salesforce and Slack at enterprise scale. Recent and current work spans the integration of Salesforce CRM into Slack, the Salesforce / OpenAI MCP integration, the Salesforce / Google Workspace integration, the Salesforce Suite (the front door for millions of new customers), and applied the new SLDS2 design system.',
+      'Lead design + architecture across Salesforce and Slack. Joined Salesforce as Principal Product Designer in Feb 2021; grew through Director and Senior Director into broader leadership across Suite and Slack.\n\nLead design for Agentic experience — making AI feel like part of the work, not a separate tool. Shape conversation-driven, trustworthy agentic systems that unify Salesforce and Slack at enterprise scale. Recent and current work spans the integration of Salesforce CRM into Slack, the Salesforce / OpenAI MCP integration, the Salesforce / Google Workspace integration, Salesforce Suite, and applying the new SLDS2 design system.',
     outcomes: [
       'Architected platforms across Salesforce + Slack that grew multi-billion ARR.',
       'Pioneered design-led trust and governance frameworks for agentic AI now shaping the future of enterprise platforms.',
@@ -45,16 +45,16 @@ const ROLES: RoleEntry[] = [
       'A concept for ambient AI hardware — a wearable Pin and a desktop Stand that project intelligence into the physical world rather than behind a screen. In research and prototyping. thefountain.ai',
   },
   {
-    range: 'Oct 2016 — Apr 2021',
+    range: '2016 — 2021',
     title: 'Co-Founder, Product Design Director · Elevar',
     location: 'Charleston, SC',
     detail:
       'Co-founded Elevar, an analytics product that brought conversational interfaces to ecommerce reporting before chatbots were cool. Drove product vision, design, and naming. Exited 2021.',
   },
   {
-    range: 'Jul 2014 — Apr 2018',
+    range: '2014 — 2018',
     title: 'UX Design and Innovation Consultant (Redshift) · Autodesk',
-    location: 'Charleston, SC',
+    location: 'San Francisco, CA',
     detail:
       'Led design strategy for Redshift, Autodesk\'s brand publication and content marketing initiative — increased engagement 10×. Designed mobile applications for "Future of Cities" and IoT projects. Webby, Digiday, CMA, and Davey awards.',
   },
@@ -156,7 +156,7 @@ export default function ResumePage() {
             Designer + Founder
           </p>
           <p className="mt-2 font-mono text-[12px] md:text-[13px] text-ink/60 leading-[1.7] m-0">
-            Seattle, WA ·{' '}
+            Charleston, SC ·{' '}
             <a href="mailto:j@mcginn.co" className="hover-underline">
               j@mcginn.co
             </a>{' '}

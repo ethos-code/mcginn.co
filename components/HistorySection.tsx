@@ -49,7 +49,7 @@ export function HistorySection({ entry }: HistorySectionProps) {
         ref={contentRef}
         className="w-full px-[clamp(24px,6vw,96px)] py-[14vh] md:py-[18vh] mx-auto max-w-[1280px]"
       >
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-y-10 gap-x-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-y-10 gap-x-10 md:gap-x-20 items-start">
           {/* Row 1, left — title */}
           <motion.h2
             {...reveal}
@@ -103,7 +103,7 @@ export function HistorySection({ entry }: HistorySectionProps) {
             {...reveal}
             transition={{ ...reveal.transition, delay: 0.08 }}
             aria-label="Selected clients across roles"
-            className="md:col-span-7 md:row-start-2 m-0 p-0 list-none font-sans text-[14px] md:text-[15px] leading-[1.7] opacity-90 columns-1 md:[column-count:2] md:[column-gap:3em] md:[column-fill:balance]"
+            className="md:col-span-7 md:row-start-2 m-0 p-0 list-none font-sans text-[14px] md:text-[15px] leading-[1.7] opacity-90 columns-1 md:[column-count:2] md:[column-gap:1.5em] md:[column-fill:balance]"
           >
             {clients.map((c) => (
               <li

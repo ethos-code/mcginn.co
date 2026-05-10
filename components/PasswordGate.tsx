@@ -33,9 +33,10 @@ export function PasswordGate({ entry, onUnlock }: PasswordGateProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="relative w-full h-full flex items-center justify-center px-6"
+      className="absolute inset-0 overflow-y-auto"
     >
-      <div className="w-full max-w-[440px]">
+      <div className="min-h-full flex items-center justify-center px-6 py-20">
+        <div className="w-full max-w-[440px]">
         <p className="font-mono text-[12px] tracking-[0.06em] uppercase opacity-60 m-0">
           NDA · Restricted
         </p>
@@ -93,6 +94,7 @@ export function PasswordGate({ entry, onUnlock }: PasswordGateProps) {
             </span>
           </div>
         </form>
+        </div>
       </div>
     </motion.div>
   );

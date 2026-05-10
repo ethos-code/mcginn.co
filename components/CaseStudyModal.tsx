@@ -69,7 +69,7 @@ export function CaseStudyModal({ entry, onClose }: CaseStudyModalProps) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed inset-0 z-50"
+        className="fixed inset-x-0 top-0 h-dvh z-50"
         style={{
           backgroundColor: bg,
           color: ink,
@@ -78,13 +78,19 @@ export function CaseStudyModal({ entry, onClose }: CaseStudyModalProps) {
           ['--cs-accent' as string]: accent,
         }}
       >
-        {/* Close button — top right, fixed */}
+        {/* Close button — top right, anchored to the modal so the iOS
+            virtual keyboard can't push it off the visual viewport. */}
         <button
           type="button"
           onClick={onClose}
           aria-label="Close case study"
-          className="fixed top-[clamp(16px,3vw,32px)] right-[clamp(16px,3vw,32px)] z-[60] w-11 h-11 flex items-center justify-center border border-current/30 hover:border-current transition-colors font-mono text-[18px]"
-          style={{ borderColor: 'currentColor', color: 'currentColor' }}
+          className="absolute z-[60] w-11 h-11 flex items-center justify-center border border-current/30 hover:border-current transition-colors font-mono text-[18px]"
+          style={{
+            top: 'max(env(safe-area-inset-top), clamp(16px, 3vw, 32px))',
+            right: 'max(env(safe-area-inset-right), clamp(16px, 3vw, 32px))',
+            borderColor: 'currentColor',
+            color: 'currentColor',
+          }}
         >
           <span aria-hidden="true">×</span>
         </button>

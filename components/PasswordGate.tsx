@@ -73,7 +73,7 @@ export function PasswordGate({ entry, onUnlock }: PasswordGateProps) {
             }}
             autoComplete="off"
             spellCheck={false}
-            className="bg-transparent border border-current/30 focus:border-current outline-none px-4 py-3 font-mono text-[14px] tracking-[0.02em]"
+            className="bg-transparent border border-current/30 focus:border-current outline-none px-4 py-3 font-mono text-[16px] sm:text-[14px] tracking-[0.02em]"
             style={{ color: 'currentColor', borderColor: 'currentColor' }}
           />
           {error && (

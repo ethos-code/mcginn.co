@@ -93,7 +93,7 @@ const QUOTES: Quote[] = [
   },
   {
     body: 'John will make an outstanding VP design leader. He has that rare-to-find approachability, craft, and skill that somehow removes the tension in a room.',
-    attribution: 'VP UX Foundations, Salesforce',
+    attribution: 'VP UX, Salesforce',
   },
   {
     body: 'I counted myself incredibly lucky to hire and bring John to my team. He brings an eye for visual execution that cannot be taught, and an innate ability to craft beautiful & intuitive solutions out of massive amounts of ambiguity.',

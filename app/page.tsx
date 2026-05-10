@@ -12,7 +12,7 @@ export default async function HomePage() {
       <h1 className="sr-only">John McGinn — Designer & Founder</h1>
       <WorkSections entries={entries} />
       <NextSection />
-      <Footer />
+      <Footer sticky />
     </main>
   );
 }

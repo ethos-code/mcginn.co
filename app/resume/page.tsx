@@ -27,11 +27,11 @@ const ROLES: RoleEntry[] = [
     title: 'Salesforce + Slack',
     location: 'Seattle, WA',
     detail:
-      'Currently Design Director + Architect at Slack (Aug 2025 – present) and Head of Design + Architect, Salesforce Suite at Salesforce (Aug 2023 – present). Joined as Principal Product Designer in Feb 2021; progressed through Director and Senior Director before taking on Suite leadership.\n\nLead design for the agentic experience layer — making AI feel like part of the work, not a separate tool. Shape conversation-driven, trustworthy agentic systems that unify Salesforce and Slack at enterprise scale. Recent and current work spans the integration of Salesforce CRM into Slack, the Salesforce / OpenAI MCP integration, the Salesforce / Google Workspace integration, the Salesforce Suite (the front door for millions of new customers), and the new Cosmos design system.',
+      'Currently Design Director + Architect at Slack (Aug 2025 – present) and Head of Design + Architect, Salesforce Suite at Salesforce (Aug 2023 – present). Joined as Principal Product Designer in Feb 2021; progressed through Director and Senior Director before taking on Suite leadership.\n\nLead design for the agentic experience layer — making AI feel like part of the work, not a separate tool. Shape conversation-driven, trustworthy agentic systems that unify Salesforce and Slack at enterprise scale. Recent and current work spans the integration of Salesforce CRM into Slack, the Salesforce / OpenAI MCP integration, the Salesforce / Google Workspace integration, the Salesforce Suite (the front door for millions of new customers), and applied the new SLDS2 design system.',
     outcomes: [
       'Architected platforms across Salesforce + Slack that grew multi-billion ARR.',
       'Pioneered design-led trust and governance frameworks for agentic AI now shaping the future of enterprise platforms.',
-      'Salesforce Suite — 51–56% sign-up rates, 8.3% trial-to-logo conversion (up from 4.3%), 10,000 Starter customers in Q1 (2× year-over-year), 25% expansion within six months of trial.',
+      'Salesforce Suite — drove meaningful gains in sign-up rates, trial-to-logo conversion, Starter customer growth, and post-trial expansion.',
       'Scaled design organization and processes to accelerate product velocity across large engineering teams.',
       'Established the cross-functional design governance council overseeing enterprise design quality across product organizations.',
       'Regularly present design strategy to CTO, CPO, and EVP audiences; speaker at Dreamforce.',

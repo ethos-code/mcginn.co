@@ -13,55 +13,51 @@ const SCENE_URL = 'https://prod.spline.design/ACP80S192fjY66ON/scene.splinecode'
 interface FountainArtworkProps {
   /** When true, allow user input (used inside the case study modal). */
   interactive?: boolean;
-  /** When true, scale up + bleed slightly outside the column (used on the section card). */
-  bleed?: boolean;
   /**
-   * When set, render an invisible overlay button on top of the pen that opens
-   * the case study on click. Match thefountain.ai's pattern: Spline is visible
-   * and animating but not directly interactive.
+   * External destination for taps on the pen. Renders an invisible
+   * overlay anchor (opens in a new tab). Matches the text CTA target.
+   */
+  href?: string;
+  /**
+   * Fallback to an invisible overlay button that fires onOpen when the
+   * entry doesn't have an external href.
    */
   onOpen?: () => void;
 }
 
 export function FountainArtwork({
   interactive = false,
-  bleed = false,
+  href,
   onOpen,
 }: FountainArtworkProps) {
   return (
-    <figure className="relative w-full overflow-visible">
+    <figure className="relative w-full h-full overflow-visible m-0">
       <div
-        className={
-          bleed
-            ? // Mobile: contained within the column. Desktop+: scale up and
-              // bleed past the right column edge for the floating-pen effect.
-              'relative w-full h-[68vh] md:w-[132%] md:h-[96vh] md:-mr-[28%] md:-my-[10vh]'
-            : 'relative w-full h-[72vh] md:h-[86vh]'
-        }
+        className="absolute inset-0"
+        style={{ pointerEvents: interactive ? 'auto' : 'none' }}
       >
-        {/*
-          The Spline scene continues to auto-animate but never receives
-          pointer/wheel events — clicks land on the overlay button below,
-          and wheel events bubble up to the page so vertical scroll works.
-        */}
-        <div
-          className="absolute inset-0"
-          style={{ pointerEvents: interactive ? 'auto' : 'none' }}
-        >
-          <Suspense fallback={null}>
-            <Spline scene={SCENE_URL} />
-          </Suspense>
-        </div>
-
-        {onOpen && !interactive && (
-          <button
-            type="button"
-            onClick={onOpen}
-            aria-label="Open Fountain in 3D"
-            className="absolute inset-0 z-10 cursor-pointer bg-transparent border-0 outline-offset-8"
-          />
-        )}
+        <Suspense fallback={null}>
+          <Spline scene={SCENE_URL} />
+        </Suspense>
       </div>
+
+      {!interactive && href && (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit thefountain.ai"
+          className="absolute inset-0 z-10 cursor-pointer bg-transparent outline-offset-8"
+        />
+      )}
+      {!interactive && !href && onOpen && (
+        <button
+          type="button"
+          onClick={onOpen}
+          aria-label="Open Fountain in 3D"
+          className="absolute inset-0 z-10 cursor-pointer bg-transparent border-0 outline-offset-8"
+        />
+      )}
       <figcaption className="sr-only">
         Fountain — a concept by John McGinn for ambient AI hardware.
       </figcaption>

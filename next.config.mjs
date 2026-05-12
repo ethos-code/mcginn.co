@@ -10,6 +10,10 @@ const nextConfig = {
   // We use plain <img> tags (not next/image), but unoptimized is required
   // for static export anyway.
   images: { unoptimized: true },
+  // Pin the workspace root to this project. Without this, Next/Turbopack
+  // walks up to ~/Desktop/dev/ (which has a stray package.json) and watches
+  // every sibling project's files — enough to hang fsevents on macOS.
+  turbopack: { root: import.meta.dirname },
 };
 
 export default nextConfig;

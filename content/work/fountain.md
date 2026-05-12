@@ -1,6 +1,6 @@
 ---
 slug: fountain
-title: FOUNTAIN®
+title: FountainAI
 year: 2024–present
 order: 5
 status: open

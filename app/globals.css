@@ -105,6 +105,16 @@ button:focus-visible {
   }
 }
 
+@keyframes glitch-glisten {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.82;
+  }
+}
+
 .hover-underline {
   border-bottom: 1px solid;
   border-color: color-mix(in oklab, currentColor 30%, transparent);

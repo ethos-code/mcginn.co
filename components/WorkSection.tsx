@@ -259,7 +259,10 @@ function Artwork({
   }
 
   return (
-    <div className="w-full max-w-[640px]">
+    <div
+      className="mx-auto w-full max-w-[640px]"
+      style={{ containerType: 'inline-size' }}
+    >
       <GlitchRedacted seed={entry.slug} />
     </div>
   );

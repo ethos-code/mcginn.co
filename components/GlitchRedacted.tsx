@@ -451,7 +451,8 @@ export function GlitchRedacted({ seed, className = '' }: GlitchRedactedProps) {
     <div
       ref={containerRef}
       aria-hidden="true"
-      className={`flex flex-col gap-1 font-mono text-[14px] md:text-[20px] leading-[1.3] tracking-[0.04em] ${className}`}
+      style={{ fontSize: 'clamp(10px, 3.5cqw, 22px)' }}
+      className={`flex flex-col gap-1 w-fit mx-auto font-mono leading-[1.3] tracking-[0.04em] ${className}`}
     >
       {cells.map((row, i) => (
         <div key={i} className="whitespace-pre">
